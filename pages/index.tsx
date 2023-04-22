@@ -34,7 +34,8 @@ export default function Home({productData}:Props) {
 // ========== SSR data fetching start here ===========
 export const getServerSideProps = async() => {
   const productData = await(
-    await fetch("http://localhost:3000/api/productdata")
+    await fetch("http://localhost:3000/api/productdata"),
+    await fetch("https://openstore.uz/api/productdata")
   ).json();
 
   return {

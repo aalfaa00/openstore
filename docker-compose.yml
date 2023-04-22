@@ -1,0 +1,8 @@
+
+version: '3.8'
+
+services:
+  admin_panel:
+    image: zeromaxinc/openstore:latest
+    ports:
+      - "3002:3000"
