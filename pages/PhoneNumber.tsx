@@ -42,7 +42,7 @@ const PhoneNumber = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     // alert(`Phone number submitted: ${phoneNumber.replace(/[\(\)\-\s]/g, '')}`);
-    await router.push('/');
+    await router.push('/Verification');
 
   };
 

@@ -120,9 +120,6 @@
   color: #f5a623;
 }
 
-.footer{
-  margin-top: 100px !important;
-}
 
 
 .container {
@@ -136,6 +133,15 @@
   margin-top: 5rem;
 }
 
+
+
 .footer {
-  margin-top: auto;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0 !important;
 }

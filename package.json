@@ -28,6 +28,7 @@
     "react-icons": "^4.8.0",
     "react-material-ui": "^0.0.1",
     "react-modal": "^3.16.1",
+    "react-otp-input": "^3.0.0",
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.2.19",
     "react-slick": "^0.29.0",
