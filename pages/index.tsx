@@ -47,7 +47,7 @@ export default function Home({productData}:Props) {
 //  Deploy
 export const getServerSideProps = async() => {
   const productData = await(
-    await fetch("https://openstore.uz/api/productdata")
+    await fetch("https://api.openstore.uz")
   ).json();
 
   return {
