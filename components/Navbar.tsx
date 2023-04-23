@@ -6,12 +6,12 @@ import React, { useState } from "react";
 import { HiOutlineShoppingBag } from "react-icons/hi"
 import { AiOutlineBars } from "react-icons/ai"
 import styles from "../styles/Navbar.module.css"
-import { GrClose } from "react-icons/gr"
 import NavbarBottom from "./NavbatBottom";
 import Link from "next/link";
 import LoginModal from "./LoginModal";
 import { Button, Modal, Form } from 'react-bootstrap';
 import PhoneNumber from "@/pages/PhoneNumber";
+import { GrClose } from "react-icons/gr";
 
 
 
@@ -42,9 +42,9 @@ const Navbar = () => {
 
 
   return (
-    <div className="w-full bg-white text-white sticky top-0 z-50 ">
+    <div className="w-full bg-white text-white">
       <div className="w-full h-full border-b-[1px] border-b-inherit hidden lg:flex">
-        <div className="container mx-auto h-20 px-4 flex items-center justify-betweeen gap-2 ">
+        <div className="container mx-auto h-20 px-4 flex items-center justify-betweeen gap-2">
 
           <Link href="/">
             <div className="navBarHover hover:bg-amber-400 logo">
@@ -123,7 +123,7 @@ const Navbar = () => {
       <div className="w-full h-full">
 
         <div className="container-fluid">
-          <div className="mx-auto h-20 px-4 flex items-center justify-betweeen lg:hidden">
+          <div className="mx-auto h-20 flex items-center justify-betweeen lg:hidden">
 
             <button className="text-2xl navBarHover hover:bg-amber-400" onClick={handleMenuToggle}>
               <AiOutlineBars />
@@ -132,7 +132,7 @@ const Navbar = () => {
 
               <div className="flex flex-1 items-center">
                 <button className={styles.closeButton} onClick={handleMenuClose}>
-                  <i className="fas fa-times"></i>
+                  <GrClose />
                 </button>
                 <button className={styles.menuButtonRegister} onClick={handleLogin}>
                   Register /
@@ -161,7 +161,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link href="/">
+            <Link className="hidden ss:hidden sm:flex" href="/">
               <div className="navBarHover hover:bg-amber-400 logo">
                 Openstore.uz
               </div>
@@ -171,13 +171,13 @@ const Navbar = () => {
 
             </div>
 
-            <div className="navBarHover hover:bg-amber-400">
+            <div className="navBarHover hover:bg-amber-400 sm:hidden md:flex">
               <AiOutlineHeart className="text-2xl" />
 
             </div>
 
 
-            <Link href="/login">
+            <Link className="" href="/login">
               <div className="navBarHover hover:bg-amber-400">
                 <AiOutlineUser className="text-2xl" />
               </div>
@@ -193,8 +193,8 @@ const Navbar = () => {
 
 
           </div>
-          <div className="mx-auto px-4 flex items-center justify-betweeen gap-2 lg:hidden">
-            <div className="h-10 flex flex-1 relative border border-2 rounded-full">
+          <div className="mx-auto px-4 flex items-center justify-betweeen gap-2 lg:hidden mb-2">
+            <div className="h-10 flex flex-1 relative border border-2 rounded-full mb-4">
               <input className="h-full w-full rounded-full px-4 text-black text-base outline-none border-[1px] border-transparent border-inherit duration-200" placeholder="Search..." type="text" />
               <span className="absolute w-8 h-8 rounded-full flex items-center justify-center top-1 right-1 bg-amber-400 text-black text-xl hover:text-white duration-300"><IoSearchOutline /></span>
             </div>
@@ -202,8 +202,13 @@ const Navbar = () => {
 
         </div>
 
-
+        
       </div>
+
+
+
+
+      
 
 
 
